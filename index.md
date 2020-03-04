@@ -57,6 +57,36 @@ And if there's anything after this for us, I expect it's kinder than we think we
 
 ### Task
 
+
+var form_selector = "#mturk_form";
+
+function gup(name) {
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.href);
+  if(results == null)
+    return "";
+  else return unescape(results[1]);
+}
+
+$(document).ready(function () {
+  if((aid = gup("assignmentId"))!="" && $(form_selector).length>0) {
+  
+    if(aid == "ASSIGNMENT_ID_NOT_AVAILABLE") {
+	    $('input,textarea,select').attr("DISABLED", "disabled");
+    }
+
+    var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
+
+
+    $(form_selector).attr('method', 'POST');
+
+
+    if((submit_url=gup("turkSubmitTo"))!="") {
+      $(form_selector).attr('action', submit_url + '/mturk/externalSubmit');
+    }
+
 <p>
 Please enter a short description in the textbox below. Separate each description with commas.
 <br><i>Example: Joe - a man, Jenna - a woman</i>
