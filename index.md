@@ -1,7 +1,13 @@
-## Like A Rock
-[Source](http://www.scp-wiki.net/in-memoriam)
+<!DOCTYPE html>
+<html>
+<head>
 
+<h1>Like A Rock</h1>
 
+<a href="http://www.scp-wiki.net/in-memoriam" target="_blank">Source</a>
+
+</head>
+<body>
 
 In May of 1998, I was 18 years old. I was smiling at the receptionist in the office of the Coast Guard recruiting center in Wilmington, North Carolina. I remember that it was a Monday and the weather was clear. I remember that she told me I looked ready to serve my country.
 
@@ -55,35 +61,19 @@ I spent 18 years serving my family, told to protect myself. I spent 15 years ser
 
 And if there's anything after this for us, I expect it's kinder than we think we deserve.
 
-### Task
+<h1>Task</h1>
 
-
-var form_selector = "#mturk_form";
-
-function gup(name) {
-  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-  var regexS = "[\\?&]"+name+"=([^&#]*)";
-  var regex = new RegExp(regexS);
-  var results = regex.exec(window.location.href);
-  if(results == null)
-    return "";
-  else return unescape(results[1]);
-}
-
-$(document).ready(function () {
-  if((aid = gup("assignmentId"))!="" && $(form_selector).length>0) {
-    if(aid == "ASSIGNMENT_ID_NOT_AVAILABLE") {
-	    $('input,textarea,select').attr("DISABLED", "disabled");
-    }
-    var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
-    $(form_selector).attr('method', 'POST');
-    if((submit_url=gup("turkSubmitTo"))!="") {
-      $(form_selector).attr('action', submit_url + '/mturk/externalSubmit');
-    }
-
-<p>
+<form id="mturk_form" name="mturk_form">
+        <div> 
+		
 Please enter a short description in the textbox below. Separate each description with commas.
 <br><i>Example: Joe - a man, Jenna - a woman</i>
-  <br> Input: 
-  <input type="text" id="mturk_form" name="characters"><br>
-  <input type="submit" value="Submit">
+
+<textarea rows="5" cols="50" name="characters" placeholder="Please enter the required information" required></textarea>
+        	<br>
+        	<button type="submit" style="background-color:red;color:black;width:150px;height:40px;font-size:20px;font-weight:bold;"onclick="alert('Thank you for your response!')">SUBMIT</button>
+    </div>
+    </form>
+
+</body>
+</html>
