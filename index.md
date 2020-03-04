@@ -85,5 +85,5 @@ $(document).ready(function () {
 Please enter a short description in the textbox below. Separate each description with commas.
 <br><i>Example: Joe - a man, Jenna - a woman</i>
   <br> Input: 
-  <input type="text" id="characters" name="characters"><br>
+  <input type="text" id="mturk_form" name="characters"><br>
   <input type="submit" value="Submit">
