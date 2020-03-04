@@ -57,9 +57,10 @@ And if there's anything after this for us, I expect it's kinder than we think we
 
 ### Task
 
+
+Please enter a short description in the textbox below. Separate each description with commas.
+<p> _Example: Joe - a man, Jenna - a woman_
 <form action="/action_page.php">
-  <label for="characters"> Please enter a short description in the textbox below. Separate each description with commas.
-    <p> <i>Example: Joe - a man, Jenna - a woman</i> </label>
   <input type="text" id="characters" name="characters"><br>
   <input type="submit" value="Submit">
 </form>
