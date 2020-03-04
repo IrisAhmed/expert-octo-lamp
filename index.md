@@ -63,12 +63,3 @@ And if there's anything after this for us, I expect it's kinder than we think we
   <input type="text" id="characters" name="characters"><br>
   <input type="submit" value="Submit">
 </form>
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
