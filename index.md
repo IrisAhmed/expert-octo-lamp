@@ -60,6 +60,6 @@ And if there's anything after this for us, I expect it's kinder than we think we
 <p>
 Please enter a short description in the textbox below. Separate each description with commas.
 <br><i>Example: Joe - a man, Jenna - a woman</i>
-  <p>
+  <br> Input: 
   <input type="text" id="characters" name="characters"><br>
   <input type="submit" value="Submit">
