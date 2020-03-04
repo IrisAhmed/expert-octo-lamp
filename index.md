@@ -72,17 +72,11 @@ function gup(name) {
 
 $(document).ready(function () {
   if((aid = gup("assignmentId"))!="" && $(form_selector).length>0) {
-  
     if(aid == "ASSIGNMENT_ID_NOT_AVAILABLE") {
 	    $('input,textarea,select').attr("DISABLED", "disabled");
     }
-
     var aid_input = $("<input type='hidden' name='assignmentId' value='" + aid + "'>").appendTo($(form_selector));
-
-
     $(form_selector).attr('method', 'POST');
-
-
     if((submit_url=gup("turkSubmitTo"))!="") {
       $(form_selector).attr('action', submit_url + '/mturk/externalSubmit');
     }
