@@ -1,4 +1,9 @@
+<p align="center">
+  
 ## Like A Rock
+[Source](http://www.scp-wiki.net/in-memoriam)
+
+
 
 In May of 1998, I was 18 years old. I was smiling at the receptionist in the office of the Coast Guard recruiting center in Wilmington, North Carolina. I remember that it was a Monday and the weather was clear. I remember that she told me I looked ready to serve my country.
 
@@ -83,3 +88,5 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+</p>
